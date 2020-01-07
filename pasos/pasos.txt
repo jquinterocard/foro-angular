@@ -1,0 +1,61 @@
+1) npm install -g npm@latest
+   npm cache clean  --force
+   npm set audit false
+   npm uninstall -g angular-cli
+   npm uninstall -g @angular/cli
+   npm cache clean --force
+   npm install -g @angular/cli@latest
+ 
+2) ng new
+	proyect name: foro-angular
+	angular routing no
+	stylesheet CSS
+
+ng serve = servidor local	
+
+3)instalar dependencias
+npm i @nowzoo/ngx-highlight-js @nowzoo/sheetload --save
+npm i angular-file-uploader --save
+npm i angular2-moment --save
+npm i bootstrap --save
+npm i jquery --save
+npm i @types/jquery --save
+
+4) crear modelos 
+ en src/app/models
+ user.ts
+
+5) cargar bootstrap en la app
+fichero angular.json
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+6)app.component.html editarlo para hacer el menu
+
+7) crear componentes
+ ng g component components/register             
+ ng g component components/login     
+ ng g component components/home     
+
+ 8) router
+ crear archivo en app llamado app.routing.ts
+ cargar archivo en app.module.ts
+ agregar <router-outlet></router-outlet> en el archivo app.component.html   
+
+
+en app.module.ts importar modulo para manejo de formularios
+import {FormsModule} from '@angular/forms';
+
+
+9 ) crear servicios para hacer peticiones al back-end
+en la carpeta app/services
+luego en app.module.ts añadir el modulo HttpClientModule
+
+
+ 
